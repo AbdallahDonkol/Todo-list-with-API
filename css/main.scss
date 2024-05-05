@@ -1,0 +1,87 @@
+$item-color: #0b3246;
+$info-color: #039497;
+$green-color: #4CAF50;
+body {
+  background-image: url(../imgs/Animated\ Shape.svg);
+}
+.w-80 {
+  width: 80% !important;
+}
+.completed-bg{
+  background-color: $green-color !important;
+}
+.text-justify{
+  text-align: justify;
+}
+.item {
+  background-color: $item-color;
+  box-shadow: 1px 1px 8px 3px #182c36;
+  .filed{
+    @media screen and (max-width: 767px) {
+      display: block !important;
+      input[type="text"]{
+        width: 100% !important;
+        margin-bottom: 1.875rem;
+      }
+      .btn-info{
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .btn-info {
+    --bs-btn-bg: #039497;
+    --bs-btn-border-color: #039497;
+  }
+  .nb-spinner{
+    width: 75px;
+    height:75px;
+    margin: auto;
+    background: transparent;
+    border-top:4px solid #03A9F4;
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    -webkit-animation: 0.5s spin linear infinite;
+    animation: 0.5s spin linear infinite;
+  }
+  @keyframes spin{
+    from{
+      -webkit-transform: rotate(0 deg);
+       transform: rotate(0 deg);
+   }
+    to{
+      -webkit-transform: rotate(360deg);
+   }
+  }
+  .task {
+    cursor: pointer;
+    transition: all 0.4s;
+    background-color: $info-color;
+    &:hover {
+      width: 80% !important;
+      @media screen and (max-width: 767px) {
+        width: 95% !important;
+      }
+    }
+    i {
+      transition: all 0.2s;
+      &.fa-circle-check:hover {
+        color: $green-color;
+      }
+      &.fa-trash-can:hover{
+        color: #ff0000;
+      }
+    }
+    .task-text{
+      width: inherit;
+      max-width: inherit;
+      word-wrap: break-word;
+      overflow: auto;
+    }
+    @media screen and (max-width: 767px) {
+      width: 90% !important;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    width: 95% !important;
+  }
+}

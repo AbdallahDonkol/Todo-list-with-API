@@ -1,0 +1,92 @@
+body {
+  background-image: url(../imgs/Animated\ Shape.svg);
+}
+
+.w-80 {
+  width: 80% !important;
+}
+
+.completed-bg {
+  background-color: #4CAF50 !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.item {
+  background-color: #0b3246;
+  box-shadow: 1px 1px 8px 3px #182c36;
+}
+@media screen and (max-width: 767px) {
+  .item .filed {
+    display: block !important;
+  }
+  .item .filed input[type=text] {
+    width: 100% !important;
+    margin-bottom: 1.875rem;
+  }
+  .item .filed .btn-info {
+    margin-left: 0 !important;
+  }
+}
+.item .btn-info {
+  --bs-btn-bg: #039497;
+  --bs-btn-border-color: #039497;
+}
+.item .nb-spinner {
+  width: 75px;
+  height: 75px;
+  margin: auto;
+  background: transparent;
+  border-top: 4px solid #03A9F4;
+  border-right: 4px solid transparent;
+  border-radius: 50%;
+  animation: 0.5s spin linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0 deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.item .task {
+  cursor: pointer;
+  transition: all 0.4s;
+  background-color: #039497;
+}
+.item .task:hover {
+  width: 80% !important;
+}
+@media screen and (max-width: 767px) {
+  .item .task:hover {
+    width: 95% !important;
+  }
+}
+.item .task i {
+  transition: all 0.2s;
+}
+.item .task i.fa-circle-check:hover {
+  color: #4CAF50;
+}
+.item .task i.fa-trash-can:hover {
+  color: #ff0000;
+}
+.item .task .task-text {
+  width: inherit;
+  max-width: inherit;
+  word-wrap: break-word;
+  overflow: auto;
+}
+@media screen and (max-width: 767px) {
+  .item .task {
+    width: 90% !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .item {
+    width: 95% !important;
+  }
+}/*# sourceMappingURL=main.css.map */
